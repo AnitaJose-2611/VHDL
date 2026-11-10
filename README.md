@@ -2,5 +2,5 @@
 This repository contains VHDL practice modules
 
 # Modules Included 
-- Combinational Design Logic
-- Sequential Design Logic
+- Combinational Logic Design
+- Sequential Logic Design 
