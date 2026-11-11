@@ -1,14 +1,14 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity Decoder_2to4 is
+entity Decoder_3to8 is
    port(
-      D: in STD_LOGIC_VECTOR(1 downto 0);
-      Y: out STD_LOGIC_VECTOR(3 downto 0);
+      D: in STD_LOGIC_VECTOR(2 downto 0);
+      Y: out STD_LOGIC_VECTOR(7 downto 0)
    );
-end Decoder_2to4;
+end Decoder_3to8;
 
-architecture Behavioural of Decoder_2to4 is 
+architecture Behavioural of Decoder_3to8 is 
    begin
       with D select
          Y <= "00000001" when "000",
@@ -19,5 +19,6 @@ architecture Behavioural of Decoder_2to4 is
               "00100000" when "101",
               "01000000" when "110",
               "10000000" when "111",
+              "00000000" when others;
    end Behavioural;
             
