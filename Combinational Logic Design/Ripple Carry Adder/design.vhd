@@ -11,7 +11,7 @@ entity rca is
    );
 end rca;
 
-architecture Behavioural of rca is 
+architecture Structural of rca is 
 signal C: STD_LOGIC_VECTOR(4 downto 0);
 begin
    C(0) <= CIN;
@@ -50,5 +50,5 @@ begin
          Cout => C(4)
       );
 
-end Behavioural;
+end Structural;
    
