@@ -1,16 +1,15 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity Logical_Left_Shifter_TB is
-end Logical_Left_Shifter_TB;
+entity tb_logical_left_shift is
+end tb_logical_left_shift;
 
-architecture Behavioral of Logical_Left_Shifter_TB is
+architecture Simulation of tb_logical_left_shift is
    signal A      : STD_LOGIC_VECTOR(7 downto 0);
    signal SHAMT  : STD_LOGIC_VECTOR(2 downto 0);
    signal RESULT : STD_LOGIC_VECTOR(7 downto 0);
 begin
-   DUT: entity work.Logical_Left_Shifter
+   DUT: entity work.logical_left_shift
       port map (
          A => A,
          SHAMT => SHAMT,
@@ -23,29 +22,29 @@ begin
       SHAMT <= "000";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "001";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "010";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "011";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "100";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "101";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "110";
       wait for 10 ns;
 
-      SHAMT <= "000";
+      SHAMT <= "111";
       wait for 10 ns;
       
       wait;
     
    end process;
 
-end Behavioral;
+end Simulation;
